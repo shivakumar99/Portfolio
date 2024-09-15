@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        *{
+            box-sizing: border-box;
+            font-family: 'Poppins';
+        }
+
+        html,body{
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .experience-body-cont{
+            height: 92vh;
+            width: 100vw;
+            background-image: url("img/BGMOTION.jpg");
+            position: relative;
+            /* background-color: blueviolet; */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .experience-matter{
+            position: relative;
+            width: 50%;
+            transition: all 0.4s ease;
+            padding-right: 10px;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+            
+        }
+
+        .experience-matter::before{
+            content: " ";
+            position: absolute;
+            background-color: rgb(36, 5, 67);
+            width: 6px;
+            height: 100%;      
+            border-radius: 2px;     
+            z-index: 1;
+        }
+
+        .comp-and-exp-cont{
+            width: 100%;
+            height: 85px;
+            margin-left: 10px;
+            margin-top: 0.4rem;
+            background-color: #f5f5f5;
+            border:1px solid #ccc;
+            border-radius: 3px;
+            
+            /* transition: all 1s ease; */
+
+
+            display: flex;
+            align-items:center;
+            justify-content: space-around;
+        }
+
+
+        .comp-and-exp-cont span{
+
+            font-size: large;
+            font-weight:bold;
+        }
+
+        .comp-and-exp-cont i{
+            font-size: small;
+        }
+
+        .exp-matter-cont{
+            width: 100%;
+            height: 0px;
+            margin-left: 10px;
+            transition: all 0.4s ease;
+            overflow: auto;
+            border-bottom:1px solid #ccc;
+            background-color: #f5f5f5;
+        }
+
+        .comp-and-exp-cont:hover{
+            cursor: pointer;
+        }
+
+        button{
+            width:40px;
+            height: 30px;
+            outline: none;
+            position: absolute;
+            right: 30px;
+            border: none;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            font-family: 'Poppins',sans-serif;
+            font-size: 0.8rem;
+            border-radius: 6px;
+            background-color: #F4B400 ;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover{
+            color:#F4B400;
+            border:2px solid #F4B400;
+            background-color: transparent;
+        }
+
+
+        </style>
+</head>
+<body>
+
+    <div class="nav-bar">
+        <div class="nav-logo">My Portfolio</div>
+
+        <div class="nav-pages">
+            <a  href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+
+            <a style="background-color: white;color:black;padding: 4px;border-radius: 4px;"  href="experience.html">Experience</a>
+
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+    <div class="experience-body-cont">
+
+        <div class="experience-matter">
+
+            <div class="experience-matter-frame">
+                <div class="comp-and-exp-cont">
+                    <span>American Express <i>(March 2024- August 2024)</i></span>
+                    <button class="btn" onclick="expandDiv(this,this.parentElement.parentElement.children[1],'350px')">+</button>
+                </div><!--comp-and-exp-cont end-->
+
+                <div class="exp-matter-cont exp-matter-cont-m" >
+                    <ul>
+                        <li>Deployed Deep Learning models (LSTM, CNN) to predict cardmember spending behaviours, increasing offer redemption by 18% and 
+                            driving $3M in incremental revenue </li>
+                        <li>Led the end-to-end development of a proprietary Merchant Affinity Score (MAS) using Gradient Boosting algorithms (XGBoost, 
+                            LightGBM) and customer transaction patterns, generating $1.5M in additional merchant spend </li>
+                        <li>Partnered with data engineering team to optimize ETL processes in Merchant Offers Data Lake using Apache Spark, cutting pipeline execution time by 50%</li>    
+                        <li>Spearheaded deployment of a Scalable Machine Learning Pipeline (SMLE) on AWS Sage maker, reducing inference latency by 40% 
+                            for real-time personalization of 20M+ card members</li>
+                        <li>Detected and blocked over 10,000 fraudulent transactions using a robust Fraud Detection System (FDS) for DiMO Offers, leveraging 
+                            Anomaly Detection and real-time streaming, while maintaining a false positive rate below 1 in 50 transactions </li>        
+                    </ul>
+
+                </div><!--exp-matter-cont end-->
+
+            </div><!--experience-matter-frame end-->
+
+            <div class="experience-matter-frame">
+                <div class="comp-and-exp-cont">
+                    <span>Northwell Health <i>(January 2023- December 2023)</i></span>
+                    <button class="btn" onclick="expandDiv(this,this.parentElement.parentElement.children[1],'240px')">+</button>
+                </div><!--comp-and-exp-cont end-->
+
+                <div class="exp-matter-cont exp-matter-cont-m" >
+                    <ul>
+                        <li>Performed Data Collection, Feature Engineering, Data modeling, and Visualization of budget and forecast data in python, utilizing 
+                            K-Means Clustering to segment patient care cost patterns reducing ~$220K resource allocation discrepancies</li>
+                        <li>Discovered High Utilizer Patients Report using SQL and Power BI reducing hospitalizations by 30% detecting ~200 patients at risk of 
+                            readmission through the monitoring system</li>
+                        <li>Scrutinized large Medicaid insurance claims datasets in RStudio, applying Generalized Linear Models (GLM) to develop optimized 
+                            pricing and risk management strategies, Leading to a reduction in annual losses by 35%</li>    
+
+                    </ul>
+
+                </div><!--exp-matter-cont end-->
+
+            </div><!--experience-matter-frame end-->
+
+
+
+            <div class="experience-matter-frame">
+                <div class="comp-and-exp-cont">
+                    <span>Flexote IT Solutions <i>(December 2020- August 2021)</i></span>
+                    <button class="btn" onclick="expandDiv(this,this.parentElement.parentElement.children[1],'210px')">+</button>
+                </div><!--comp-and-exp-cont end-->
+
+                <div  class="exp-matter-cont" >
+                    <ul>
+                        <li>Collaborated with cross-functional teams to develop and deploy InsightMax analytics suite boosting system performance and increasing 
+                            user adoption by 10%</li>
+                        <li>Leveraged SAS for customer data analysis and predictive modeling, contributing to the development of Salesforce Service Cloud features 
+                            like automated customer support workflow led to 20% increase in customer satisfaction scores</li>
+                        <li>Utilized Bayesian A/B testing, regression analysis, and machine learning models to optimize Subaru's Connected Vehicle features, 
+                            leading to increase in user engagement across the STARLINK platform, impacting over ~50,000 users</li>        
+
+                    </ul>
+
+                </div><!--exp-matter-cont end-->
+
+            </div><!--experience-matter-frame end-->
+
+            
+            <div class="experience-matter-frame">
+                <div class="comp-and-exp-cont">
+                    <span>IBM <i>(June 2019- May 2020)</i></span>
+                    <button class="btn" onclick="expandDiv(this,this.parentElement.parentElement.children[1],'170px')">+</button>
+                </div><!--comp-and-exp-cont end-->
+
+                <div  class="exp-matter-cont" >
+                    <ul>
+                        <li>Created custom sales performance reports using IBM Cognos Analytics for Reliance Retail, enhancing insights into regional sales 
+                            growth and top-performing products, optimizing sales forecasting accuracy by 15% </li>
+                        <li>Designed SQL queries to extract defect rates and milestone adherence, for the IBM Watson AI using IBM DataStage and Db2, resulting 
+                            in the resolution of ~50 critical defects and a 15-day refinement in meeting deadlines</li>
+
+                    </ul>
+
+                </div><!--exp-matter-cont end-->
+
+            </div><!--experience-matter-frame end-->
+
+        </div><!--experience-matter end-->
+
+    </div><!--experience-body-cont end-->
+    
+
+
+
+
+
+    <script>
+        function expandDiv(btn,ele,ht){
+            btn.innerText = "-";
+            ele.style.height=ht;
+            btn.removeAttribute("onclick");
+            btn.setAttribute("onclick",`collapseDiv(this,this.parentElement.parentElement.children[1],'${ht}')`);
+        }
+
+        function collapseDiv(btn,ele,ht){
+            debugger;
+            btn.innerText = "+";
+            ele.style.height="0px";
+            btn.removeAttribute("onclick");
+            btn.setAttribute("onclick",`expandDiv(this,this.parentElement.parentElement.children[1],'${ht}')`);
+        }
+    </script>
+</body>
+</html>

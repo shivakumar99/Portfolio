@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .contact-frm{
+            width: 40vw;
+            height: 60vh;
+            position: relative;
+            left:50%;
+            transform: translate(-50%);
+            margin-top: 50px;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius:20px;
+            padding: 20px;
+         
+        }
+
+        .contact-frm h1{
+            padding: 0;
+            font-family: 'Poppins',sans-serif;
+            font-size: 2rem;
+        }
+
+
+        .field-cont{
+            font-family: 'Poppins',sans-serif;
+            position: relative;
+            font-size:14px;
+            padding-top:20px;
+            
+            }
+
+        .field-cont input{
+            appearance:none;
+            outline:none;
+            width:250px;
+            padding:12px;
+            font-size:14px;
+            font-family: 'Poppins',sans-serif;
+            margin-bottom: 20px;    
+            border-radius: 4px;
+        }
+
+        .phold{
+            position:absolute;
+            left:12px;
+            top:calc(10px + 50%);
+            transform:translateY(-50%);
+            color:#aaaa;
+            transition:all 0.2s ease-in;
+
+            }
+
+        .field-cont input:valid + .phold, .field-cont input:focus + .phold{
+            top:5px;
+            background:#ffff;
+            font-size:12px;
+            padding: 0 5px;
+            left:10px;
+            color:black;
+            }
+            .ta-btn{
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items:center;
+
+            }
+        button{
+            height: 60px;
+            width: 120px;
+            outline: none;
+            border:none;
+            cursor: pointer;
+            font-family: 'Poppins',sans-serif;
+            background-color: #4285F4;
+            color: white;
+            font-size: 1.2rem;
+            border-radius: 4px;
+            position: absolute;
+            left:60%;
+            top:60%;
+            transition: all 0.2s ease;
+        }
+
+        button:hover{
+            background-color: #1f5bbb;
+        }
+
+        .clp-path-r{
+            position: absolute;
+            background-color: red;
+            width:50%;
+            height: 40%;
+            z-index: -10;
+            left:50%;
+            top:0;
+            clip-path: circle(26.1% at 83% 19%);
+
+        }
+
+        .clp-path-l{
+            position: absolute;
+            background-color: red;
+            width:50%;
+            height: 40%;
+            z-index: -10;
+            left:50%;
+            bottom:0;
+            clip-path: circle(26.1% at 13% 79%);
+
+        }
+
+        .clp-path-m{
+            position: absolute;
+            background-color: rgba(167, 14, 14, 0.671);
+            width:50%;
+            height: 40%;
+            z-index: -10;
+            left:50%;
+            top:50%;
+            clip-path: circle(26.7% at 59% 35%);
+
+        }
+
+        .cont-stat{
+            width: 40vw;
+            height: 15vh;
+            background-color: white;
+            margin-top: 40px;
+            border-radius: 15px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 1.8rem;
+            color:black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: none;
+            text-align: center;
+        
+
+        }
+
+    </style>
+    </style>
+
+    
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-logo">My Portfolio</div>
+
+        <div class="nav-pages">
+            <a  href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a style="background-color: white;color:black;padding: 4px;border-radius: 4px;" href="contact.html">Contact</a>
+        </div>
+
+    </div>
+    
+    <div class="contact-frm">
+
+        <div class="clp-path-r"></div>
+
+        <div class="clp-path-l"></div>
+        <div class="clp-path-m"></div>
+
+
+        <h1>Send Me a Mail</h1>
+        <form method="POST" action="https://formspree.io/f/mrbzvawl">
+        
+        <div class="cont">
+            <label class="field-cont">
+             
+              <input type="text" name="username" required>
+               <span class="phold">Name</span>
+              </label
+            
+          </div>
+
+          <div class="cont">
+            <label class="field-cont">
+             
+              <input type="text" name="custname" required>
+               <span class="phold">Email</span>
+              </label
+            
+          </div>
+          
+          
+          <div class="ta-btn">
+          <textarea wrap="off" rows="10" cols="40" name="subjectvalue" style= "display:block;overflow:auto; resize: none; outline: none; font-size: 14px;font-family: sans-serif;border:2px solid black;border-radius: 4px;" placeholder="Subject"></textarea>
+
+          
+          <button type="submit">Send</button>
+
+        </div>
+        </form>
+
+        <div class="cont-stat">
+
+        </div>
+
+
+       </div>
+
+<script>
+    var contStat = document.querySelector('.cont-stat');
+    var ips = Array.from(document.querySelectorAll(".contact-frm input"));
+    var txtArea = document.querySelector('textarea');
+
+    function snd(){
+        if(txtArea.value=="" || ips[0].value=="" || ips[1].value==""){
+            contStat.textContent=" ";
+            contStat.style.display="block";
+            contStat.style.color="red";
+            contStat.textContent="ENTER ALL THE FIELDS";
+
+        }
+        else{
+            contStat.textContent=" ";
+            contStat.style.display="block";
+            contStat.style.color="green";
+            contStat.textContent="SENT";
+        }
+    }
+</script>
+</body>
+</html>

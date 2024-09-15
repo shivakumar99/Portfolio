@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{ box-sizing: border-box;}
+html,body{
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden ; */
+
+}
+:root{
+    --white:#FAFAF8;
+    --gray:#B8BCB9;
+    --baby-pink:#DCA9A4;
+    --dark-pink:#B33C70;
+    --dark-gray:#3E4B4E;
+}
+p,span{
+    margin:0;
+}
+.nav-bar{
+    z-index: 30;
+    position: sticky;
+    top:0;
+    width:100%;
+    height: 8vh;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav-pages{
+
+    width:50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-pages a{
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.nav-logo{
+    color:white;
+    padding-left: 20px;
+    font-size:1.5rem;
+    font-family: 'Poppins',sans-serif;
+}
+
+.first-page{
+}
+.landing-part::after{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top:0;
+    left:0;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: .55;
+    z-index: 0;
+}
+.landing-part > *{
+    z-index: 10;
+    position: relative;
+}
+/* home page section */
+.landing-part {
+    background-image: url("img/shiva.jpeg"), url("img/shiva2.jpeg"), url("img/shiva3.jpeg");
+    background-size: 33.99% auto, 33.99% auto, 33.99% auto ; /* Adjust size of each image */
+    background-repeat: no-repeat;
+    background-position: left, center, right; /* Position the images */
+    width: 100vw;
+    height: 92vh;
+    position: relative;
+    color: white;
+    padding: 20px;
+}
+/* TEXT CONTAINER  */
+.text-container{
+    width:600px;
+    height: 80px;
+    /* border:1px solid white; */
+    margin-left: 40px;
+    font-size: 2.5rem;
+    overflow-y: hidden;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    word-spacing: 2px;
+    
+}
+.text-container span{
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-weight: bolder;
+    font-size: 3.0rem;
+}
+.clg-text-part p {
+    word-break: normal; /* Prevents words from breaking unnecessarily */
+    hyphens: none; /* Disables hyphenation */
+}
+
+.text-container p{
+    transform: translateY(-200%);
+}
+
+/* text slide front page animation */
+.slide-anim-1{
+    animation: slide .8s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+}
+.slide-anim-2{
+    animation: slide .8s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.0s;
+}
+.slide-anim-3{
+    animation: slide .8s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.8s;
+}
+.slide-anim-4{
+    transform: translateY(400%);
+    animation: slide-pf .8s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.6s;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateY(-200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }}
+
+
+
+@keyframes slide-pf{
+    0%{
+        transform: translateY(400%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.scroll-down-anim{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: light;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translateX(-50%);
+    animation: scroll-blink 0.5s ease-in-out .5s infinite alternate;
+
+}
+
+@keyframes scroll-blink{
+    0%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.second-page{
+ padding: 20px;
+}
+.education-part{
+    background: #ffff;
+    border-radius: 30px;
+    width: 96vw ;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+.education-part img{
+    background: transparent;
+    width: 750px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.clg-text-part{
+    padding: 10px;
+    width:800px;
+    align-self: center;
+}
+.clg-text-part p{
+    padding:0;
+    font-size: 3rem;
+    line-height: 15vh;
+
+}
+.clg-text-part span{
+    display: inline-block;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+    font-size:2.0rem;
+    font-weight: 600;
+    line-height: 10vh;
+    transition: all 0.4s ease ;
+    transform: translateY(-10px);
+    opacity: 0;
+    color:black;
+}
+
+@keyframes clgTxtAnim{
+    0%{
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.txt-restore{
+    transform: translateY(-10px);
+    opacity: 0;
+    
+}
+
+/* SKILLS PART TYPING ANIMATION  */
+.skills-part{
+    width:96vw;
+    height: 30vh;
+    background-color: black;
+    background-image: url("img/blueprint.jfif");
+    background-size: contain;
+    border-radius: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 2rem;
+    color: #FAFAF8;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+  
+}
+.typing{
+    position: relative;
+    overflow:hidden;
+    white-space: nowrap;
+    width: 0ch;
+    /* animation: type 4s steps(80) forwards; */
+}
+@keyframes type{
+    0%{
+        width:0ch;
+        
+    }
+    100%{
+        width: 82ch;
+      
+    }
+}
+.hobbies-part{
+    background-color: #f2f2f2;
+    height: 100vh;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transform: translateY(-200%);
+    transition: all 1s ease-out;
+ /* cubic-bezier(0.175, 0.885, 0.32, 1.275) ; */
+}
+
+.hobbies-part h1{
+    padding: 0;
+    font-size: 3rem;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.H-card{
+    width:400px;
+    height: 60vh;
+    background-color: #FAFAF8;
+    border-radius: 20px;
+    /* padding: 10px; */
+    transition: all 0.2s ease-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
+
+}
+
+.H-card:hover{
+    transform: scale(1.05);
+}
+.card-img{
+    width:100%;
+    height:250px;
+    background-color: red;
+    border-radius: 3px; 
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 78%);
+    position: relative;
+}
+.card-img-mask{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.4;
+}
+.card-img p{
+    padding: 0;
+    position: absolute;
+    top:0;
+ /*   z-index: 10;*/
+    font-size: 2.8rem;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-weight: bolder;
+    padding: 10px;
+}
+.card-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    
+}
+
+.card-txt{
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: 'Poppins',sans-serif;
+    color:black;
+}
+
+.project-sec{
+    width: 100%;
+    height: 30vh;
+    padding:20px;
+    background-color: #f2f2f2;
+}
+.project-part{
+    width: 100%;
+    height: 20vh;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    
+}
+.project-part p{
+    padding:0;
+    font-size: 2.5rem;
+    font-family: 'Poppins',sans-serif;
+    color: black;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+
+.project-part button{
+    position: absolute;
+    top:50%;
+    right: 30px;
+    width:200px;
+    height: 50px;
+    transform: translateY(-50%);
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.4rem;
+    border-radius: 6px;
+    background-color: #F4B400 ;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.project-part button:hover{
+    background-color: #d19a01 ;
+   
+}
+
+.project-part:hover .exp-clip-path{
+    clip-path: circle(125.0% at 2% 94%);
+    background-color: rgba(60, 255, 0, 0.658);
+}
+
+.exp-clip-path{
+    width:100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.658);
+    clip-path: circle(24.4% at 2% 94%);
+    /* clip-path: circle(110.1% at 2% 94%); */
+    transition: all 0.5s ease-out; 
+    border-radius: 15px;
+}
