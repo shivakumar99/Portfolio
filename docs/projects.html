@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+         *{
+             box-sizing: border-box;
+         }
+
+         html,body{
+             padding: 0;
+             background-color: #f2f2f2;
+         }
+         
+         .prj-crd-cont{
+            
+            width:80vw;
+            height: auto;
+            background-image: url("img/NY.jpg");
+            background-size: cover;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+
+         }
+
+         .prj-crd{
+             margin-bottom: 20px;
+            position:relative;
+            width: 60vw;
+            height: 20vh;
+            background-color:white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            transition: all 0.5s ease;
+   
+         }
+
+         .prj-crd p{
+             padding: 0;
+             font-size: 1.2rem;
+             white-space: pre-wrap;
+             font-family: 'Poppins',sans-serif;
+             color:black;
+             z-index: 5;
+             padding-left: 150px;
+             
+
+            }
+
+            .prj-crd:hover{
+                transform: scale(1.1);
+            }
+
+            .prj-crd:hover .prj-card-clp{
+                clip-path: circle(40.5% at 18% 20%);
+
+            }
+         .prj-card-clp{
+            position: absolute;
+            top:0;
+            clip-path: circle(33.3% at 18% 20%);
+            background-color: blue;
+            width:200px;
+            height:200px;
+            transition: all 0.5s ease;
+         }
+
+        .prj-card-clp-txt{
+            position: absolute;
+            top:20%;
+            left:-15%;
+            color:white;
+            font-weight: bold;
+            font-family: 'Poppins',sans-serif;
+            z-index:15;
+         }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-logo">My Portfolio</div>
+
+        <div class="nav-pages">
+            <a  href="index.html">Home</a>
+            <a style="background-color: white;color:black;padding: 4px;border-radius: 4px;" href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </div>
+
+
+
+    <div class="prj-crd-cont">
+
+        
+
+        <div class="prj-crd">
+           
+            <p>
+                <a href="https://github.com/shivakumar99/Loan-Eligibility-Prediction-Python" target="_blank">Homestead Automated Loan Eligibility Prediction</a>
+            </p>
+            
+            <div class="prj-card-clp">
+                
+            </div>
+            <p class="prj-card-clp-txt">1</p>
+
+        </div>
+
+        <div class="prj-crd">
+           
+            <p>
+                <a href="https://github.com/shivakumar99/Credit-Card-Fraud-Detection-2023" target="_blank">Credit Card Fraud Detection</a>
+             </p>
+            <div class="prj-card-clp">
+                
+            </div>
+            <p class="prj-card-clp-txt">2</p>
+
+        </div>
+
+        <div class="prj-crd">
+           
+            <p>
+                <a href= "https://github.com/shivakumar99/Time-Series-Analysis-of-Bitcoin-price-change" target="_blank">Time series analysis of Bitcoin Price Change</a>
+            </p>
+            <div class="prj-card-clp">
+                
+            </div>
+            <p class="prj-card-clp-txt">3</p>
+
+        </div>
+        
+    </div>
+
+
+
+
+    
+</body>
+</html>
